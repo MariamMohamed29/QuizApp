@@ -11,8 +11,8 @@ import java.util.List;
 public class QuizController {
     @Autowired
     private QuizService quizService;
-    @PostMapping("/quiz")
-    public String createQuiz(@RequestParam String category,@RequestParam int numOfQues,@RequestParam String title){
+    @PostMapping("/quiz/{category}/{numOfQues}/{title}")
+    public String createQuiz(@PathVariable String category,@PathVariable int numOfQues,@PathVariable String title){
       return this.quizService.createQuiz(category,numOfQues,title);
     }
     @GetMapping("QuizQuestions/{id}")
