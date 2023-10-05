@@ -120,8 +120,13 @@ Once the application runs you should see something like this
 ```
 ## Tools & Technologies💡
 1-Programming Language: Java 17.
+
 2-Backend Framework: Spring Boot v2.7.14.
+
 3-Logger: SLF4J.
+
 4-Docker.
+
 5-Login & Registration.
+
 6-Authentication & Authorization.
