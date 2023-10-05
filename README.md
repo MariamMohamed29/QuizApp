@@ -129,4 +129,7 @@ Once the application runs you should see something like this
 
 5-Login & Registration.
 
+
+   
+
 6-Authentication & Authorization.
