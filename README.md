@@ -118,3 +118,10 @@ Once the application runs you should see something like this
 2023-08-29 04:54:50.325  INFO 14096 --- [           main] f.C.CurrencyConversionProjectApplication : Started CurrencyConversionProjectApplication in 6.646 seconds (JVM running for 7.43)
 
 ```
+## Tools & Technologies💡
+1-Programming Language: Java 17.
+2-Backend Framework: Spring Boot v2.7.14.
+3-Logger: SLF4J.
+4-Docker.
+5-Login & Registration.
+6-Authentication & Authorization.
