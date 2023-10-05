@@ -133,6 +133,8 @@ Once the application runs you should see something like this
 
 7-Authentication & Authorization.
 
+
+
 ## Architecture of Currency Conversion API
 
 ## <mark style="background: #FFB86CA6;">1- pair-conversion Api</mark>
