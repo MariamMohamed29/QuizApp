@@ -125,11 +125,10 @@ Once the application runs you should see something like this
 
 3-Logger: SLF4J.
 
-4-Docker.
+4-Actuator.
 
-5-Login & Registration.
+5-Docker.
 
+6-Login & Registration.
 
-   
-
-6-Authentication & Authorization.
+7-Authentication & Authorization.
