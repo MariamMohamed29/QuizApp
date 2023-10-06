@@ -231,7 +231,6 @@ Body : {
 
 ### Api Contract :
 
-
 ### Request Example :
 ```
 GET : http://localhost:8080/7
@@ -249,7 +248,11 @@ GET : http://localhost:8080/7
     "rightAnswer": "Compile time polymorphism",
     "difficultyLevel": "easy"
 }
+
+
+
 ****
+
 
 ## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
 
