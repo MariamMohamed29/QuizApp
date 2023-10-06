@@ -224,7 +224,6 @@ Body : {
 }
 ```
 
-
 ****
 
 ## <mark style="background: #FFB86CA6;">4- Get question by ID</mark>
@@ -233,11 +232,13 @@ Body : {
 
 ### Request Example :
 ```
-GET : http://localhost:8080/7
+
+GET : GET : http://localhost:8080/7
+
 ```
 
 ### Response Example :
-```json
+```
 {
     "category": "java",
     "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
@@ -248,6 +249,7 @@ GET : http://localhost:8080/7
     "rightAnswer": "Compile time polymorphism",
     "difficultyLevel": "easy"
 }
+```
 
 
 
