@@ -252,7 +252,7 @@ GET : GET : http://localhost:8080/7
 ```
 ****
 
-## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
+## <mark style="background: #FFB86CA6;">5- Update question by ID</mark>
 
 ### Api Contract :
 
@@ -285,6 +285,427 @@ Body :  {
     "rightAnswer": "Compile time polymorphism",
     "difficultyLevel": "hard"
 }
+```
+****
+
+## <mark style="background: #FFB86CA6;">6- Get all questions</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+GET : http://localhost:8080/allQuestions
+
+```
+
+### Response Example :
+```
+[
+    {
+        "category": "java",
+        "questionTitle": "which java keyword is used to create a subclass?",
+        "option1": "class",
+        "option2": "interface",
+        "option3": "extends",
+        "option4": "implements",
+        "rightAnswer": "extends",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Who invented Java Programming?",
+        "option1": "Guido van Rossum",
+        "option2": "James Gosling",
+        "option3": "Dennis Ritchie",
+        "option4": "Bjarne Stroustrup",
+        "rightAnswer": " James Gosling",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which environment variable is used to set the java path?",
+        "option1": "MAVEN_Path",
+        "option2": "JavaPATH",
+        "option3": "JAVA",
+        "option4": "JAVA_HOME",
+        "rightAnswer": "JAVA_HOME",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of the following is not an OOPS concept in Java?",
+        "option1": "Polymorphism",
+        "option2": "Inheritance",
+        "option3": "Compilation",
+        "option4": "Encapsulation",
+        "rightAnswer": "Compilation",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which exception is thrown when java is out of memory?",
+        "option1": "MemoryError",
+        "option2": "OutOfMemoryError",
+        "option3": "MemoryOutOfBoundsException",
+        "option4": "MemoryFullException",
+        "rightAnswer": " OutOfMemoryError",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of these are selection statements in Java?",
+        "option1": "break",
+        "option2": "continue",
+        "option3": "for()",
+        "option4": "if()",
+        "rightAnswer": "if()",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Which type of Programming does Python support?",
+        "option1": "object-oriented programming",
+        "option2": "structured programming",
+        "option3": "functional programming",
+        "option4": " all of the mentioned",
+        "rightAnswer": " all of the mentioned",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Is Python case sensitive when dealing with identifiers?",
+        "option1": " no",
+        "option2": "yes",
+        "option3": "machine dependent",
+        "option4": "none of the mentioned",
+        "rightAnswer": "yes",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "All keywords in Python are in _________",
+        "option1": "Capitalized",
+        "option2": "lower case",
+        "option3": "UPPER CASE",
+        "option4": "None of the mentioned",
+        "rightAnswer": "None of the mentioned",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Which keyword is used for function in Python language?",
+        "option1": "Function",
+        "option2": "def",
+        "option3": "Fun",
+        "option4": "Define",
+        "rightAnswer": "def",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": " Which of the following functions can help us to find the version of python that we are currently working on?",
+        "option1": "sys.version(1)",
+        "option2": "sys.version(0)",
+        "option3": "sys.version()",
+        "option4": "sys.version",
+        "rightAnswer": "sys.version",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": " Python supports the creation of anonymous functions at runtime, using a construct called __________",
+        "option1": "pi",
+        "option2": "anonymous",
+        "option3": "lambda",
+        "option4": "none of the mentioned",
+        "rightAnswer": "lambda",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Which of the following is true for variable names in Python?",
+        "option1": "underscore and ampersand are the only two special characters allowed",
+        "option2": "unlimited length",
+        "option3": " all private members must have leading and trailing underscores",
+        "option4": "none of the mentioned",
+        "rightAnswer": "unlimited length",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of the below is not a Java Profiler?",
+        "option1": "JProfiler",
+        "option2": "Eclipse Profiler",
+        "option3": "JVM",
+        "option4": "JConsole",
+        "rightAnswer": "JVM",
+        "difficultyLevel": "hard"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+        "option1": "Multiple polymorphism",
+        "option2": "Compile time polymorphism",
+        "option3": "Multilevel polymorphism",
+        "option4": "Execution time polymorphism",
+        "rightAnswer": "Compile time polymorphism",
+        "difficultyLevel": "hard"
+    }
+]
+```
+****
+
+## <mark style="background: #FFB86CA6;">7- Get questions by category</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+GET : http://localhost:8080/api/python
+
+```
+
+### Response Example :
+```
+[
+    {
+        "category": "python",
+        "questionTitle": "Which type of Programming does Python support?",
+        "option1": "object-oriented programming",
+        "option2": "structured programming",
+        "option3": "functional programming",
+        "option4": " all of the mentioned",
+        "rightAnswer": " all of the mentioned",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Is Python case sensitive when dealing with identifiers?",
+        "option1": " no",
+        "option2": "yes",
+        "option3": "machine dependent",
+        "option4": "none of the mentioned",
+        "rightAnswer": "yes",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "All keywords in Python are in _________",
+        "option1": "Capitalized",
+        "option2": "lower case",
+        "option3": "UPPER CASE",
+        "option4": "None of the mentioned",
+        "rightAnswer": "None of the mentioned",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Which keyword is used for function in Python language?",
+        "option1": "Function",
+        "option2": "def",
+        "option3": "Fun",
+        "option4": "Define",
+        "rightAnswer": "def",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": " Which of the following functions can help us to find the version of python that we are currently working on?",
+        "option1": "sys.version(1)",
+        "option2": "sys.version(0)",
+        "option3": "sys.version()",
+        "option4": "sys.version",
+        "rightAnswer": "sys.version",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": " Python supports the creation of anonymous functions at runtime, using a construct called __________",
+        "option1": "pi",
+        "option2": "anonymous",
+        "option3": "lambda",
+        "option4": "none of the mentioned",
+        "rightAnswer": "lambda",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "python",
+        "questionTitle": "Which of the following is true for variable names in Python?",
+        "option1": "underscore and ampersand are the only two special characters allowed",
+        "option2": "unlimited length",
+        "option3": " all private members must have leading and trailing underscores",
+        "option4": "none of the mentioned",
+        "rightAnswer": "unlimited length",
+        "difficultyLevel": "easy"
+    }
+]
+```
+****
+
+## <mark style="background: #FFB86CA6;">8- Get questions by category and difficultyLevel</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+GET : http://localhost:8080/api/java/easy
+
+```
+
+### Response Example :
+```
+[
+    {
+        "category": "java",
+        "questionTitle": "which java keyword is used to create a subclass?",
+        "option1": "class",
+        "option2": "interface",
+        "option3": "extends",
+        "option4": "implements",
+        "rightAnswer": "extends",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Who invented Java Programming?",
+        "option1": "Guido van Rossum",
+        "option2": "James Gosling",
+        "option3": "Dennis Ritchie",
+        "option4": "Bjarne Stroustrup",
+        "rightAnswer": " James Gosling",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which environment variable is used to set the java path?",
+        "option1": "MAVEN_Path",
+        "option2": "JavaPATH",
+        "option3": "JAVA",
+        "option4": "JAVA_HOME",
+        "rightAnswer": "JAVA_HOME",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of the following is not an OOPS concept in Java?",
+        "option1": "Polymorphism",
+        "option2": "Inheritance",
+        "option3": "Compilation",
+        "option4": "Encapsulation",
+        "rightAnswer": "Compilation",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which exception is thrown when java is out of memory?",
+        "option1": "MemoryError",
+        "option2": "OutOfMemoryError",
+        "option3": "MemoryOutOfBoundsException",
+        "option4": "MemoryFullException",
+        "rightAnswer": " OutOfMemoryError",
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of these are selection statements in Java?",
+        "option1": "break",
+        "option2": "continue",
+        "option3": "for()",
+        "option4": "if()",
+        "rightAnswer": "if()",
+        "difficultyLevel": "easy"
+    }
+]
+```
+****
+
+## <mark style="background: #FFB86CA6;">9- Create quiz API</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+PUT : http://localhost:8080/quiz?category=java&numOfQues=5&title=Jquiz
+
+
+```
+
+### Response Example :
+```
+success
+```
+****
+
+## <mark style="background: #FFB86CA6;">10- Get questions of quiz by quizID</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+GET : http://localhost:8080/QuizQuestions/18
+
+
+```
+
+### Response Example :
+```
+[
+    {
+        "category": "java",
+        "questionTitle": "Which environment variable is used to set the java path?",
+        "option1": "MAVEN_Path",
+        "option2": "JavaPATH",
+        "option3": "JAVA",
+        "option4": "JAVA_HOME",
+        "rightAnswer": null,
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of these are selection statements in Java?",
+        "option1": "break",
+        "option2": "continue",
+        "option3": "for()",
+        "option4": "if()",
+        "rightAnswer": null,
+        "difficultyLevel": "easy"
+    },
+    {
+        "category": "java",
+        "questionTitle": "Which of the following is not an OOPS concept in Java?",
+        "option1": "Polymorphism",
+        "option2": "Inheritance",
+        "option3": "Compilation",
+        "option4": "Encapsulation",
+        "rightAnswer": null,
+        "difficultyLevel": "easy"
+    }
+]
+```
+****
+
+## <mark style="background: #FFB86CA6;">11- Submit answers of quiz</mark>
+
+### Api Contract :
+
+### Request Example :
+```
+
+PUT : http://localhost:8080/submission/18
+
+Body :["JAVA_HOME","No","MemoryFullException"]
+
+
+```
+
+### Response Example :
+```
+1
 ```
 
 
