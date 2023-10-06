@@ -135,150 +135,188 @@ Once the application runs you should see something like this
 
 
 
-## Architecture of Currency Conversion API
+## Architecture of Quiz Application API
 
-## <mark style="background: #FFB86CA6;">1- pair-conversion Api</mark>
+## <mark style="background: #FFB86CA6;">1- regesteration Api</mark>
 
 ### Api Contract :
-```
-GET : {base_url}/pair-conversion
-	?base={base_currency}
-	&target={target_currency}
-	&amount={amount}
-```
 
 ### Request Example :
 ```
-GET : localhost:8080/pair-conversion
-	?base=USD
-	&target=EGP
-	&amount=222
+POST : http://localhost:8080/api/auth/register
+
+Body : {
+         "userNameOrEmail":"marwa",
+         "password":"marwa0011"
+       }
 ```
 
 ### Response Example :
 ```
 {
-    "statusCode": 200,
-    "data": {
-        "conversion_result": 6860.133
-    }
+    "userName": "marwa",
+    "email": "marwa",
+    "role": "ROLE_USER"
 }
 ```
 
 ****
 
-## <mark style="background: #FFB86CA6;">2- comparison API</mark>
+## <mark style="background: #FFB86CA6;">2- Login API</mark>
 
 ### Api Contract :
-```
-GET : {base_url}/comparison
-	?base={base_currency}
-	&target1={target_currency_1}
-	&target={target_currency_2}
-	&amount={amount}
-```
-
 ### Request Example :
 ```
-GET : localhost:8080/comparison
-	?base=USD
-	&target1=EUR
-	&target2=EGP
-	&amount=222
+POST : http://localhost:8080/api/auth/login
+
+Body : {
+    "userNameOrEmail":"mariam",
+    "password":"mariam292000",
+    "confirmPassword":"mariam292000"
+       }
 ```
 
 ### Response Example :
 ```
 {
-    "statusCode": 200,
-    "data": {
-        "firstTargetCurrency": {
-            "conversion_result": 205.6164
-        },
-        "secondTargetCurrency": {
-            "conversion_result": 6860.133
-        }
-    }
+    "userName": "mariam",
+    "email": "mariam",
+    "role": "ROLE_USER",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoibWFyaWFtIiwic3ViIjoibWFyaWFtIiwiaWF0IjoxNjk2NTQ5NDA4LCJleHAiOjE2OTY1NTA4NDh9.vMdhChMQY8EmP4hYwRYfPh-xLVqHQjN35DxOmp8PP1I",
+    "authenticated": true
 }
 ```
 
 ****
 
-## <mark style="background: #FFB86CA6;">3- Favorite currencies Api</mark>
+## <mark style="background: #FFB86CA6;">3- adding new question API</mark>
 
 ### Api Contract :
 
-***POST : to send request body for all currencies .***
-
-```
-
-POST : {base_url}/favorite-currencies
-	?base={base_currency}
-
-Body : [
-         "EGP",
-	 "EUR",
-         "SAR"
-       ]
-```
-
 ### Request Example :
 ```
-// For example : we have USD and 3 currencies as favorites : EGP, EUR, SAR
 
-POST : localhost:8080/favorite-currencies
-	?base=USD
+POST : http://localhost:8080/newQuestion
 
-Body : [
-	"EGP",
-	"EUR",
-        "SAR"
-       ]	
+Body : {
+    "category":"java",
+    "questionTitle":"Which of the below is not a Java Profiler?",
+    "option1":"JProfiler",
+    "option2":"Eclipse Profiler",
+    "option3":"JVM",
+    "option4":"JConsole",
+    "rightAnswer":"JVM",
+    "difficultyLevel":"hard"
+}
 ```
 
 ### Response Example :
 ```
 {
-    "statusCode": 200,
-    "status": "success",
-    "data": [
-        30.9,
-        0.9248,
-        3.75
-    ]
+    "category": "java",
+    "questionTitle": "Which of the below is not a Java Profiler?",
+    "option1": "JProfiler",
+    "option2": "Eclipse Profiler",
+    "option3": "JVM",
+    "option4": "JConsole",
+    "rightAnswer": "JVM",
+    "difficultyLevel": "hard"
 }
 ```
 
 
 ****
 
-## <mark style="background: #FFB86CA6;">4- Get All Currencies Api</mark>
+## <mark style="background: #FFB86CA6;">4- Get question by ID</mark>
 
 ### Api Contract :
-```
-GET : {base_url}/currencies
-```
+
 
 ### Request Example :
 ```
-GET : localhost:8080/currencies
+GET : http://localhost:8080/7
 ```
 
 ### Response Example :
 ```json
 {
-    "statusCode": 200,
-    "data": [
-        {
-            "code": "EUR",
-            "name": "Europe Union",
-            "flagUrl": "*********"
-        },
-        {
-            "code": "USD",
-            "name": "United States",
-            "flagUrl": "*********"
-        }
-    ]
+    "category": "java",
+    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+    "option1": "Multiple polymorphism",
+    "option2": "Compile time polymorphism",
+    "option3": "Multilevel polymorphism",
+    "option4": "Execution time polymorphism",
+    "rightAnswer": "Compile time polymorphism",
+    "difficultyLevel": "easy"
+}
+****
+
+## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
+
+### Api Contract :
+
+
+### Request Example :
+```
+PUT : http://localhost:8080/7
+
+Body : {
+    "category": "java",
+    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+    "option1": "Multiple polymorphism",
+    "option2": "Compile time polymorphism",
+    "option3": "Multilevel polymorphism",
+    "option4": "Execution time polymorphism",
+    "rightAnswer": "Compile time polymorphism",
+    "difficultyLevel": "hard"
+}
+```
+
+### Response Example :
+```json
+{
+    "category": "java",
+    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+    "option1": "Multiple polymorphism",
+    "option2": "Compile time polymorphism",
+    "option3": "Multilevel polymorphism",
+    "option4": "Execution time polymorphism",
+    "rightAnswer": "Compile time polymorphism",
+    "difficultyLevel": "hard"
+}
+****
+
+## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
+
+### Api Contract :
+
+
+### Request Example :
+```
+PUT : http://localhost:8080/7
+
+Body : {
+    "category": "java",
+    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+    "option1": "Multiple polymorphism",
+    "option2": "Compile time polymorphism",
+    "option3": "Multilevel polymorphism",
+    "option4": "Execution time polymorphism",
+    "rightAnswer": "Compile time polymorphism",
+    "difficultyLevel": "hard"
+}
+```
+
+### Response Example :
+```json
+{
+    "category": "java",
+    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
+    "option1": "Multiple polymorphism",
+    "option2": "Compile time polymorphism",
+    "option3": "Multilevel polymorphism",
+    "option4": "Execution time polymorphism",
+    "rightAnswer": "Compile time polymorphism",
+    "difficultyLevel": "hard"
 }
 
