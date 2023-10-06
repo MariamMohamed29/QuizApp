@@ -139,7 +139,6 @@ Once the application runs you should see something like this
 
 ## <mark style="background: #FFB86CA6;">1- regesteration Api</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -164,7 +163,6 @@ Body : {
 
 ## <mark style="background: #FFB86CA6;">2- Login API</mark>
 
-### Api Contract :
 ### Request Example :
 ```
 POST : http://localhost:8080/api/auth/login
@@ -191,7 +189,6 @@ Body : {
 
 ## <mark style="background: #FFB86CA6;">3- adding new question API</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -228,7 +225,6 @@ Body : {
 
 ## <mark style="background: #FFB86CA6;">4- Get question by ID</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -254,7 +250,6 @@ GET : GET : http://localhost:8080/7
 
 ## <mark style="background: #FFB86CA6;">5- Update question by ID</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -290,7 +285,6 @@ Body :  {
 
 ## <mark style="background: #FFB86CA6;">6- Get all questions</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -458,8 +452,6 @@ GET : http://localhost:8080/allQuestions
 
 ## <mark style="background: #FFB86CA6;">7- Get questions by category</mark>
 
-### Api Contract :
-
 ### Request Example :
 ```
 
@@ -546,7 +538,6 @@ GET : http://localhost:8080/api/python
 
 ## <mark style="background: #FFB86CA6;">8- Get questions by category and difficultyLevel</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -624,7 +615,6 @@ GET : http://localhost:8080/api/java/easy
 
 ## <mark style="background: #FFB86CA6;">9- Create quiz API</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -642,7 +632,6 @@ success
 
 ## <mark style="background: #FFB86CA6;">10- Get questions of quiz by quizID</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
@@ -691,7 +680,6 @@ GET : http://localhost:8080/QuizQuestions/18
 
 ## <mark style="background: #FFB86CA6;">11- Submit answers of quiz</mark>
 
-### Api Contract :
 
 ### Request Example :
 ```
