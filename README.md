@@ -284,39 +284,5 @@ Body : {
     "rightAnswer": "Compile time polymorphism",
     "difficultyLevel": "hard"
 }
-****
 
-## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
-
-### Api Contract :
-
-
-### Request Example :
-```
-PUT : http://localhost:8080/7
-
-Body : {
-    "category": "java",
-    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
-    "option1": "Multiple polymorphism",
-    "option2": "Compile time polymorphism",
-    "option3": "Multilevel polymorphism",
-    "option4": "Execution time polymorphism",
-    "rightAnswer": "Compile time polymorphism",
-    "difficultyLevel": "hard"
-}
-```
-
-### Response Example :
-```json
-{
-    "category": "java",
-    "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
-    "option1": "Multiple polymorphism",
-    "option2": "Compile time polymorphism",
-    "option3": "Multilevel polymorphism",
-    "option4": "Execution time polymorphism",
-    "rightAnswer": "Compile time polymorphism",
-    "difficultyLevel": "hard"
-}
 
