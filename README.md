@@ -250,22 +250,18 @@ GET : GET : http://localhost:8080/7
     "difficultyLevel": "easy"
 }
 ```
-
-
-
 ****
-
 
 ## <mark style="background: #FFB86CA6;">4- Update question by ID</mark>
 
 ### Api Contract :
 
-
 ### Request Example :
 ```
+
 PUT : http://localhost:8080/7
 
-Body : {
+Body :  {
     "category": "java",
     "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
     "option1": "Multiple polymorphism",
@@ -278,8 +274,8 @@ Body : {
 ```
 
 ### Response Example :
-```json
-{
+```
+ {
     "category": "java",
     "questionTitle": "Which of the following is a type of polymorphism in Java Programming?",
     "option1": "Multiple polymorphism",
@@ -289,5 +285,10 @@ Body : {
     "rightAnswer": "Compile time polymorphism",
     "difficultyLevel": "hard"
 }
+```
+
+
+
+
 
 
